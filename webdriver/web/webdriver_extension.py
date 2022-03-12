@@ -1,5 +1,5 @@
 from .check import Check
-
+from utilities.allure.report import step 
 
 class WebdriverExtension:
 
@@ -9,5 +9,6 @@ class WebdriverExtension:
         self._driver.implicitly_wait(implicitly_wait)
         self.check = Check(self._driver)
 
+    @step
     def open(self):
         self._driver.get(self.url)

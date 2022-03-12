@@ -28,7 +28,7 @@ class Check:
         except NoSuchElementException:
             return False
 
-    def element_will_appear(self, locator: tuple, timeout=4, poll_frequency=0.25) -> bool:
+    def element_should_appear(self, locator: tuple, timeout=4, poll_frequency=0.25) -> bool:
         """return True if element will appear during timeout value period or False if otherwise
 
         Args:
